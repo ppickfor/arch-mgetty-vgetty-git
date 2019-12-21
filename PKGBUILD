@@ -22,7 +22,7 @@ source=('git+https://github.com/ppickfor/mgetty.git'
         mgetty.install
 	)
 md5sums=('SKIP'
-         '7eb629cac6ba2dce360a857f0e88c31f'
+         '2884e30a3c72a98885fed76c3d9e7a1d'
          '4b73a5654db86a34a8dccdf5f55c699c'
          '3c1b50a8bebf9a2d6e4252fce79f4c34'
          '9aa2b3ff3ff4daa5ed018d4fac8d86b4'
