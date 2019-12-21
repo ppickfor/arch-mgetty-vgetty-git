@@ -45,6 +45,7 @@ package() {
   cd "$srcdir//${_origpkgname}"
   # add directories needed by install
   mkdir -p $pkgdir/usr/lib/mgetty+sendfax
+  mkdir -p $pkgdir/etc/mgetty+sendfax
   mkdir -p $pkgdir/var/spool
   mkdir -p $pkgdir/usr/share/man
   make prefix=$pkgdir/usr spool=$pkgdir/var/spool CONFDIR=$pkgdir/etc/mgetty+sendfax FAX_OUT_USER=0 install install-vgetty|| return 1
