@@ -44,6 +44,7 @@ check() {
 package() {
   cd "$srcdir//${_origpkgname}"
   # add directories needed by install
+  mkdir -p $pkgdir/usr/bin
   mkdir -p $pkgdir/usr/lib/mgetty+sendfax
   mkdir -p $pkgdir/etc/mgetty+sendfax
   mkdir -p $pkgdir/var/spool
