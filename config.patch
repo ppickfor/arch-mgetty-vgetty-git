@@ -1,23 +1,14 @@
---- ../../pp/mgetty-1.1.37/Makefile	2010-06-05 02:48:22.000000000 -0700
-+++ Makefile	2016-02-18 06:19:34.596801007 -0800
-@@ -109,7 +109,7 @@
- #	    USTAT	  - ustat(), no statfs etc.
- #
- #CFLAGS=-Wall -O2 -pipe -DSECUREWARE -DUSE_POLL
--CFLAGS=-O2 -Wall -pipe
-+CFLAGS=-O2 -Wall -pipe -DAUTO_PPP
- #CFLAGS=-O -DSVR4
- #CFLAGS=-O -DSVR4 -DSVR42
- #CFLAGS=-O -DUSE_POLL
+--- Makefile.orig       2019-12-21 20:05:45.253955362 +0000
++++ Makefile    2019-12-21 20:05:45.530626132 +0000
 @@ -171,7 +171,7 @@
  #
  # if your systems doesn't have one, use the shell script that I provide
  # in "inst.sh" (taken from X11R5). Needed on IRIX5.2
 -INSTALL=install -c -o bin -g bin
 +INSTALL=install -c -o root -g root
- #INSTALL=install -c -o root -g wheel		# NeXT/BSD
- #INSTALL=/usr/ucb/install -c -o bin -g bin	# AIX, Solaris 2.x
- #INSTALL=installbsd -c -o bin -g bin		# OSF/1, AIX 4.1, 4.2
+ #INSTALL=install -c -o root -g wheel           # NeXT/BSD
+ #INSTALL=/usr/ucb/install -c -o bin -g bin     # AIX, Solaris 2.x
+ #INSTALL=installbsd -c -o bin -g bin           # OSF/1, AIX 4.1, 4.2
 @@ -179,7 +179,7 @@
  #
  # prefix, where most (all?) of the stuff lives, usually /usr/local or /usr
@@ -71,12 +62,4 @@
  #
  #
  # A shell that understands bourne-shell syntax
-@@ -282,7 +282,7 @@
- # please use the "mg.echo" program provided in the compat/ subdirectory.
- # Set ECHO="mg.echo" and INSTALL_MECHO to mg.echo
- #
--ECHO="echo"
-+ECHO="echo -e"
- #
- # INSTALL_MECHO=mg.echo
- 
+
